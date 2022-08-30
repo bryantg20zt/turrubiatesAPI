@@ -1,0 +1,38 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', 'sans-serif';
+}
+
+.containerMain {
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContainer {
+    width: 180px;
+    height: 180px;
+    background-color: #EB1D36;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.pokemonStyle {
+    height: 200px;
+    position: relative;
+    top: -70px;
+}
+
+.pokemonStyleP {
+    color: white;
+    font-size: 21px;
+    position: relative;
+    top: -60px;
+}
