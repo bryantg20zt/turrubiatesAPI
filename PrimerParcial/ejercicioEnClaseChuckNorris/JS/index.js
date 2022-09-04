@@ -1,4 +1,7 @@
 window.onload = () => {
+    
+    console.log("Ejercicio en clase Chuck Norris");
+
     async function getData (name,lastName) {
         const response = await fetch(`http://api.icndb.com/jokes/random?firstName=${name}&lastName=${lastName}`);
         const data = await response.json();
