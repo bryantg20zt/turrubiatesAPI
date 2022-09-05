@@ -1,0 +1,23 @@
+.main {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.formData {
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-Data {
+    width: 150px;
+    height: 40px;
+}
+
+.btn {
+    width: 160px;
+    height: 40px;
+}
