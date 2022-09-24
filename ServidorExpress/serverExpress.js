@@ -1,10 +1,37 @@
+/* ==========================> DEPENDENCIAS */
+
 const express = require('express');
 const cors = require('cors');
 
+/* ==========================> DEPENDENCIAS */
+
+/* ==========================> SERVIDOR OBJ */
+
 const app = express();
+
+/* ==========================> SERVIDOR OBJ */
+
+/* ==========================> CONFIGURACION SERVER */
+
 app.use(cors());
 app.use(express.text());
 app.use(express.json());
+
+/* ==========================> CONFIGURACION SERVER */
+
+/* Se utilizan los Middleware para hacer algo antes de que llegue el response */
+
+app.use((req,res,next)=>{
+    console.log('Primer Middleware');
+    next();
+},(req,res,next) => {
+    console.log('Segundo Middleware');
+    next();
+})
+
+/* Se utilizan los Middleware para hacer algo antes de que llegue el response */
+
+/* =======================> ENDPOINTS */
 
 app.get('/', (req , res) => res.sendFile('/static/index.html',{root: __dirname}));
 
@@ -27,9 +54,15 @@ app.post('/queryData' , (req, res) => {
 
 app.post('/' , (req,res) => res.send('Peticion POST'));
 
+/* =======================> ENDPOINTS */
+
+/* =======================> ERROR 404 */
+
 app.use((req,res) => {
     res.status(404).sendFile('./static/404.html', {root : __dirname});
 
 })
+
+/* =======================> ERROR 404 */
 
 app.listen(8082, () => console.log(__dirname));
