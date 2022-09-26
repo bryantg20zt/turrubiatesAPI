@@ -2,6 +2,9 @@
 
 const express = require('express');
 const cors = require('cors');
+var fs = require('fs');
+var path = require('path');
+var morgan = require('morgan');
 
 /* ==========================> DEPENDENCIAS */
 
@@ -11,8 +14,10 @@ const app = express();
 
 /* ==========================> SERVIDOR OBJ */
 
-/* ==========================> CONFIGURACION SERVER */
+var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' });
 
+/* ==========================> CONFIGURACION SERVER */
+app.use(morgan('combined', { stream: accessLogStream }));
 app.use(cors());
 app.use(express.text());
 app.use(express.json());
@@ -20,6 +25,7 @@ app.use(express.json());
 /* ==========================> CONFIGURACION SERVER */
 
 /* Se utilizan los Middleware para hacer algo antes de que llegue el response */
+
 
 app.use((req,res,next)=>{
     console.log('Primer Middleware');
