@@ -1,0 +1,11 @@
+{
+  "name": "modulojs",
+  "version": "1.0.0",
+  "description": "Primer modulo para publicar ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bryan Turrubiates",
+  "license": "ISC"
+}
