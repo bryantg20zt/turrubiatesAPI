@@ -8,6 +8,7 @@ var path = require('path');
 var morgan = require('morgan');
 const responseGet = require('./modules/responseGet');
 import { responseText } from './modules/responseText.js';
+import { pool } from '../../SegundoParcial/database/conectionDB.js';
 
 /* ==========================> DEPENDENCIAS */
 
@@ -46,6 +47,11 @@ router.use(function timeLog(req, res, next) {
   });
   router.post('/Users', (req,res) => {
     res.send('Peticion POST a Usuarios');
+  })
+
+  router.get('/rosterzt', async (req,res) => {
+     const responseDB = pool.query('SELECT * FROM roster');
+     res.json(responseDB);
   })
 
 /* Se utilizan los Middleware para hacer algo antes de que llegue el response */
