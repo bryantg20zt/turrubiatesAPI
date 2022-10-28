@@ -1,11 +1,15 @@
 import express from 'express';
 import {pool} from '../database/conectionDB.js';
+import cors from 'cors';
+
 
 const app = express();
 
+app.use(cors());
+
 app.use(express.json());
 
-app.get('/api/get', async (req, res) => {
+app.get('/api/rosterzt', async (req, res) => {
     const [ResponseDB] = await pool.query('SELECT * FROM roster');
     res.json(ResponseDB);
 });
