@@ -1,0 +1,11 @@
+{
+    "persona" : {
+        "nombre" : "Bryan",
+        "apellido" : "Turrubiates",
+        "Edad" : 21,
+        "ztRole" : [
+            "Web Designer",
+            "Frontend Developer"
+        ]
+    }
+}

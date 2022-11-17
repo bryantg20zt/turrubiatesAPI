@@ -1,0 +1,7 @@
+persona :
+ nombre : Bryan
+ apellido : Turrubiates
+ edad : 21
+ ztRole : 
+  - Web developer
+  - Frontend Developer
