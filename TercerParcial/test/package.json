@@ -1,0 +1,23 @@
+{
+  "type": "module",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mocha": "^10.1.0",
+    "morgan": "^1.10.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node ./node_modules/mocha/bin/mocha"
+  },
+  "name": "test",
+  "version": "1.0.0",
+  "main": "serverExpress.js",
+  "devDependencies": {
+    "chai-http": "^4.3.0"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": ""
+}
